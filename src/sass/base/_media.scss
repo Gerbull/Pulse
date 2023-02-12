@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-    // resolution 992
+    //min resolution 992
     .container {
         max-width: 900px;
     }
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 991px) {
-    // resolution 768
+    //min resolution 768
     .container {
         max-width: 720px;
     }
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 767px) {
-    // resolution 576
+    //min resolution 576
     .container {
         max-width: 520px;
     }
@@ -70,10 +70,14 @@
             margin-bottom: 20px;
         }
     }
+    .consultation {
+        min-height: 600px;
+        padding: 50px 0 50px 0;
+    }
 }
 	
 @media (max-width: 575px) {
-    // resolution 320
+    //min resolution 320
     .container {
         padding: 0 10px;
     }
@@ -132,6 +136,20 @@
         &__text {
             margin-bottom: 20px;
         }
+    }
+    .consultation {
+        &__descr {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+    .title_left {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .feed-form {
+        margin-top: 25px;
+        width: 250px;
     }
 }
 		
