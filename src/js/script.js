@@ -33,4 +33,55 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    //Modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
   });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+  });
+	$('.button_mini').each(function(i) {
+		$(this).on('click', function() {
+			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+			$('.overlay, #order').fadeIn('slow');
+		})
+	});
+
+    //Validate
+  $('#consultation-form').validate();
+  $('#consultation form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: {
+        required: true,
+        minlength: 11,
+        maxlength: 11
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, укажите свое имя",
+        minlength: jQuery.validator.format("Хотя бы {0} символа требуется!")
+      },
+      phone: {
+        required: "Пожалуйста, укажите свой телефон",
+        minlength: jQuery.validator.format("Телефон должен состоять из {0} цифр"),
+        maxlength: jQuery.validator.format("Телефон должен состоять из {0} цифр")
+      },
+      email: {
+        required: "Пожалуйста, укажите свой email",
+        email: "Введите почту в виде ivan@yandex.ru"
+      }     
+    }
+  });
+  $('#order form').validate();
+});

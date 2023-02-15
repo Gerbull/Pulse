@@ -8,7 +8,19 @@
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.6);
     color: #FFFFFF;
+    transition: 0.2s all;
+    box-shadow: 4px 4px rgba($color: #000000, $alpha: 0.4);
+    &:hover {
+        background: #a70000;
+    }
+    &:active {
+        transition: 0.1s all;
+        box-shadow: 2px 2px rgba($color: #000000, $alpha: 0.4);
+        transform: translateX(2px);
+        transform: translateY(2px);
+    }
     &_main{
         margin-top: 67px;
         width: 300px;

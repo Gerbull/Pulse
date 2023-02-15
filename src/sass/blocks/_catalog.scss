@@ -1,5 +1,5 @@
 .catalog {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     &__tabs {
         margin-top: 50px;
         list-style-type: none;
@@ -23,8 +23,8 @@
         transform: skewX(-30deg);
         cursor: pointer;
         transition: 0.5s all;
-        &:hover {
-            box-shadow: 3px 3px 20px $main-color;
+            &:hover {
+                box-shadow: 3px 3px 20px $main-color;
             border: none;
         }
         div {
@@ -42,7 +42,7 @@
     &__content {
         margin-top: 55px;
         display: none;
-        justify-content: space-between;
+        // justify-content: space-between;
         flex-wrap: wrap;
         &_active {
             display: flex;
@@ -51,10 +51,11 @@
 
     &-item {
         width: 303px;
+        margin: 0 6px;
         min-height: 442px;
         border: 2px solid #E8E8E8;
         padding: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         overflow: hidden;
         &__img {
             max-width: 100%;
